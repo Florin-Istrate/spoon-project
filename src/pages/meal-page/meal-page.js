@@ -82,16 +82,42 @@ const MealPlan = () => {
           <div>
             <div className="d-flex mt-3">
               <div>
-              <img src={mealInfo?.image} alt="meal" className="info-image" />
-              <p> <span className="font-weight-bold ">Serving portion:</span> {mealInfo?.nutrition?.weightPerServing?.amount} g</p>
+                <img src={mealInfo?.image} alt="meal" className="info-image" />
+                <p>
+                  {" "}
+                  <span className="font-weight-bold ">
+                    Serving portion:
+                  </span>{" "}
+                  {mealInfo?.nutrition?.weightPerServing?.amount} g
+                </p>
               </div>
               <div>
                 <h1 className="text-center">{mealInfo?.title}</h1>
                 <div className="d-flex justify-content-around">
-                <p className="font-weight-bold">Likes: {mealInfo.aggregateLikes}</p>
-                <p className="font-weight-bold">Health score: {mealInfo.healthScore}<img src=""></img></p>
-                <p className="font-weight-bold">Preparation time: {mealInfo.readyInMinutes}minutes</p>
-
+                  <p className="font-weight-bold">
+                    Likes: {mealInfo.aggregateLikes}{" "}
+                    <img
+                      src={require("../../assets/like.png")}
+                      alt="like"
+                      className="custom-small-img"
+                    ></img>
+                  </p>
+                  <p className="font-weight-bold">
+                    Health score: {mealInfo.healthScore}
+                    <img
+                      src={require("../../assets/health.png")}
+                      className="custom-small-img"
+                      alt="heart"
+                    ></img>
+                  </p>
+                  <p className="font-weight-bold">
+                    Preparation time: {mealInfo.readyInMinutes}minutes{" "}
+                    <img
+                      src={require("../../assets/time.png")}
+                      alt="clock"
+                      className="custom-small-img"
+                    ></img>
+                  </p>
                 </div>
                 <ol>
                   {mealInfo?.analyzedInstructions[0] &&
@@ -106,18 +132,38 @@ const MealPlan = () => {
                 <li>
                   <span className="font-weight-bold">Calories: </span>
                   {mealInfo?.nutrition?.nutrients[0]?.amount} kcal
+                  <img
+                    src={require("../../assets/calories.png")}
+                    alt="calories"
+                    className="custom-small-img"
+                  ></img>
                 </li>
                 <li>
-                  <span className="font-weight-bold">Carbs: </span>
+                  <span className="font-weight-bold">Carbohydrates: </span>
                   {mealInfo?.nutrition?.nutrients[3]?.amount}g
+                  <img
+                    src={require("../../assets/carbohydrates.png")}
+                    alt="carbs"
+                    className="custom-small-img"
+                  ></img>
                 </li>
                 <li>
                   <span className="font-weight-bold">Fat: </span>
-                  {mealInfo?.nutrition?.nutrients[1]?.amount}g
+                  {mealInfo?.nutrition?.nutrients[1]?.amount}g{" "}
+                  <img
+                    src={require("../../assets/fat.png")}
+                    alt="fat"
+                    className="custom-small-img"
+                  ></img>
                 </li>
                 <li>
                   <span className="font-weight-bold">Protein:</span>
-                  {mealInfo?.nutrition?.nutrients[8]?.amount}g
+                  {mealInfo?.nutrition?.nutrients[8]?.amount}g{" "}
+                  <img
+                    src={require("../../assets/protein.png")}
+                    alt="protein"
+                    className="custom-small-img"
+                  ></img>
                 </li>
               </ul>
             </div>
