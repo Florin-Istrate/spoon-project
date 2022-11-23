@@ -10,7 +10,7 @@ const HowItWorks = () => {
             <h1>How We Automate Your Meal Planning</h1>
             <h4>(And put you in control of your diet!)</h4>
             <p>
-              Eat This Much helps you with the two most important things to make
+              EatHealty.com helps you with the two most important things to make
               your healthy diet a success
             </p>
             <ol className="font-weight-bold">
@@ -22,7 +22,7 @@ const HowItWorks = () => {
                 needs 🍲
               </li>
             </ol>
-            <p>Let's see how Eat This Much makes it happen!</p>
+            <p>Let's see how EatHealthy makes it happen!</p>
             {/* <p>Start Free Now</p> */}
             <a className="custom_home_btn" href={"/"}>Start Free Now</a>
           </div>
@@ -36,7 +36,7 @@ const HowItWorks = () => {
         <div className="container py-5">
           <div className="row">
             <div className="col-12 text-center">
-              <h2>People Love Eat This Much</h2>
+              <h2>People Love EatHealthy This Much</h2>
             </div>
           </div>
           <div className="row text-center">
