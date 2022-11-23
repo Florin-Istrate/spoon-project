@@ -1,0 +1,85 @@
+.meal-form-container {
+  max-width: 30rem;
+}
+.time-frame-container {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-shadow-box {
+  box-shadow: 0 4px 8px 2px rgba(77, 77, 77, 0.15);
+  border-radius: 10px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.intolerance-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  gap: 0.5rem;
+  height: fit-content;
+}
+
+.diet-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  /* gap: 0.5rem; */
+  height: fit-content;
+}
+
+.custom-diet-img {
+  display: flex;
+  max-width: 3.5rem;
+  justify-self: center;
+  margin: auto;
+}
+
+.custom-p {
+  text-align: center;
+}
+
+.custom-padding {
+  padding: 0.1rem;
+}
+
+.option {
+  padding: 0.3rem;
+}
+
+.option.selected {
+  background-color: #007bff;
+  color: white;
+  border-radius: 1rem;
+}
+
+.option:hover {
+  background-color: #007bff;
+  color: white;
+  border-radius: 1rem;
+}
+.custom-padding-big {
+  padding: 0.3rem;
+}
+
+.custom-button {
+  padding: .5rem;
+  background-color: #f0754f;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+.custom-button:hover {
+  background-color: #c14925;
+}
+
+.checked:checked + label {
+  background-color: red !important;
+}
