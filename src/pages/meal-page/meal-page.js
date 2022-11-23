@@ -84,11 +84,13 @@ const MealPlan = () => {
               <div>
                 <img src={mealInfo?.image} alt="meal" className="info-image" />
                 <p>
-                  {" "}
-                  <span className="font-weight-bold ">
-                    Serving portion:
-                  </span>{" "}
-                  {mealInfo?.nutrition?.weightPerServing?.amount} g
+                  <span className="font-weight-bold ">Serving portion:</span>
+                  {mealInfo?.nutrition?.weightPerServing?.amount} g{" "}
+                  <img
+                    src={require("../../assets/meal.png")}
+                    alt="portion"
+                    className="custom-small-img"
+                  ></img>
                 </p>
               </div>
               <div>
