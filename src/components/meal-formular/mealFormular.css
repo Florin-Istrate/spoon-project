@@ -51,13 +51,13 @@
 }
 
 .option.selected {
-  background-color: #007bff;
+  background-color: #f0754f;
   color: white;
   border-radius: 1rem;
 }
 
 .option:hover {
-  background-color: #007bff;
+  background-color: #c14925;
   color: white;
   border-radius: 1rem;
 }
@@ -66,7 +66,7 @@
 }
 
 .custom-button {
-  padding: .5rem;
+  padding: 0.5rem;
   background-color: #f0754f;
   border-radius: 10px;
   text-decoration: none;
@@ -74,6 +74,11 @@
   border: none;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+}
+
+.custom-button:hover {
+  background-color: #c14925;
+  color: white;
 }
 
 .custom-button:hover {

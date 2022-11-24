@@ -14,3 +14,13 @@
     margin-bottom: .50rem;
 }
 
+.bg-img{
+    background-image:url(../../assets/eat+the+rainbow.jpg) ;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 100%;
+    background-position-x: -411px;
+    background-position-y: -151px;
+    background-size: contain;
+    background-color: #fcfdff;
+}

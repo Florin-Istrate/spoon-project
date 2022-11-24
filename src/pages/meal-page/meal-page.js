@@ -84,8 +84,8 @@ const MealPlan = () => {
               <div>
                 <img src={mealInfo?.image} alt="meal" className="info-image" />
                 <p>
-                  <span className="font-weight-bold ">Serving portion:</span>
-                  {mealInfo?.nutrition?.weightPerServing?.amount} g{" "}
+                  <span className="font-weight-bold margin-0-1">Serving portion:</span>
+                  {mealInfo?.nutrition?.weightPerServing?.amount} g
                   <img
                     src={require("../../assets/meal.png")}
                     alt="portion"
@@ -97,7 +97,7 @@ const MealPlan = () => {
                 <h1 className="text-center">{mealInfo?.title}</h1>
                 <div className="d-flex justify-content-around">
                   <p className="font-weight-bold">
-                    Likes: {mealInfo.aggregateLikes}{" "}
+                    Likes: {mealInfo.aggregateLikes}
                     <img
                       src={require("../../assets/like.png")}
                       alt="like"
@@ -113,7 +113,7 @@ const MealPlan = () => {
                     ></img>
                   </p>
                   <p className="font-weight-bold">
-                    Preparation time: {mealInfo.readyInMinutes}minutes{" "}
+                    Preparation time: {mealInfo.readyInMinutes}minutes
                     <img
                       src={require("../../assets/time.png")}
                       alt="clock"
@@ -151,7 +151,7 @@ const MealPlan = () => {
                 </li>
                 <li>
                   <span className="font-weight-bold">Fat: </span>
-                  {mealInfo?.nutrition?.nutrients[1]?.amount}g{" "}
+                  {mealInfo?.nutrition?.nutrients[1]?.amount}g
                   <img
                     src={require("../../assets/fat.png")}
                     alt="fat"
@@ -160,7 +160,7 @@ const MealPlan = () => {
                 </li>
                 <li>
                   <span className="font-weight-bold">Protein:</span>
-                  {mealInfo?.nutrition?.nutrients[8]?.amount}g{" "}
+                  {mealInfo?.nutrition?.nutrients[8]?.amount}g
                   <img
                     src={require("../../assets/protein.png")}
                     alt="protein"

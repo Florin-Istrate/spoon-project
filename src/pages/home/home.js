@@ -4,7 +4,7 @@ import "./home.css";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-img">
       <div className="heading">
         <h1 className="col-12 text-center">Put your diet on autopilot</h1>
         <p className="col-md-8 offset-md-2 text-center heading-text">

@@ -34,3 +34,8 @@
     text-decoration: none;
     color: white;
 }
+
+.custom_home_btn:hover {
+  background-color: #c14925;
+  color: white;
+}

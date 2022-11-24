@@ -60,7 +60,7 @@ const MealFormular = () => {
       >
         {/* Time frame selection */}
         <Form.Label className="d-flex justify-content-center">
-          Meal planer for{" "}
+        <span className="font-weight-bold"> Plan my meal for</span>
         </Form.Label>
         <Form.Group className="d-flex gap-5 justify-content-center">
           <div className="time-frame-container">
@@ -81,7 +81,7 @@ const MealFormular = () => {
                 <label className="checkbox" htmlFor={val}>
                   <img
                     className="custom-diet-img custom-padding cursor-pointer"
-                    src={require(`../../assets/${val}.png`)}
+                    src={require(`../../assets/day.png`)}
                     alt={val}
                   ></img>
                   <p className="text-center">{val}</p>
@@ -93,7 +93,7 @@ const MealFormular = () => {
         {/* intolerance select */}
         <Form.Group>
           <Form.Label className="d-flex justify-content-center">
-            Intolerance
+           <span className="font-weight-bold"> Intolerance</span>
           </Form.Label>
           <div className="intolerance-container d-flex justify-content-between custom-padding">
             {intolerance.map((val) => (
@@ -128,13 +128,13 @@ const MealFormular = () => {
           className="mb-3 d-flex justify-content-center gap-2 align-items-center"
           controlId="calories-input"
         >
-          <Form.Label>Calories I want to eat</Form.Label>
+          <Form.Label><span className="font-weight-bold"> Calories i need</span></Form.Label>
           <Form.Control
             type="number"
             key="calories"
             className="w-25"
-            placeholder=""
-            defaultValue={2000}
+            placeholder="2000"
+            // defaultValue={2000}
             step={100}
             min={0}
             max={20000}
@@ -145,7 +145,7 @@ const MealFormular = () => {
         {/* Diet selection */}
         <Form.Group>
           <Form.Label className="d-flex justify-content-center">
-            Diet
+          <span className="font-weight-bold"> Diet</span>
           </Form.Label>
           <div className="diet-container d-flex justify-content-between">
             {diets.map((val) => (
@@ -180,7 +180,7 @@ const MealFormular = () => {
         {/* <Button variant="primary" className="custom-button" type="submit">
           Submit
         </Button> */}
-        <button className="custom-button">Submit</button>
+        <button className="custom-button font-weight-bold">Submit</button>
       </Form>
       {/* END Form */}
 
