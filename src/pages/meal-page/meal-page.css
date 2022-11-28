@@ -22,3 +22,8 @@
   color: white;
   border: none;
 }
+
+
+.rotated:hover {
+  transform: rotate(45deg);
+}

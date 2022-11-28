@@ -141,7 +141,7 @@ const MealFormular = () => {
             max={20000}
             onChange={handleCalories}
           />
-          <Form.Text className="text-muted">calories</Form.Text>
+          <Form.Label><span className="font-weight-bold"> calories</span></Form.Label>
         </Form.Group>
         {/* Diet selection */}
         <Form.Group>

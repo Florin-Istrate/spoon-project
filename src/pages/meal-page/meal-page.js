@@ -81,7 +81,7 @@ const MealPlan = () => {
   return (
     <>
       <div>
-        <button className="custom-buton" onClick={handleSaveMeal}>Save Recipes</button>
+        {recipes.length > 0 && <button className="custom-buton" onClick={handleSaveMeal}>Save Recipes</button>}      
         {recipes?.map((recipe) => (
           <MealDayContainer
           mealDay={recipe}
@@ -115,14 +115,14 @@ const MealPlan = () => {
                     <img
                       src={require("../../assets/like.png")}
                       alt="like"
-                      className="custom-small-img"
+                      className="custom-small-img rotated"
                     ></img>
                   </p>
                   <p className="font-weight-bold">
                     Health score: {mealInfo.healthScore}
                     <img
                       src={require("../../assets/health.png")}
-                      className="custom-small-img"
+                      className="custom-small-img rotated"
                       alt="heart"
                     ></img>
                   </p>
@@ -131,7 +131,7 @@ const MealPlan = () => {
                     <img
                       src={require("../../assets/time.png")}
                       alt="clock"
-                      className="custom-small-img"
+                      className="custom-small-img rotated"
                     ></img>
                   </p>
                 </div>
