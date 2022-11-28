@@ -47,6 +47,7 @@ const MealFormular = () => {
     navigate(
       `/meal?timeFrame=${timeFrame}&calories=${calories}&diet=${diet}&exclude=${exclude}`
     );
+    localStorage.clear()
   };
 
   console.log(exclude);
@@ -128,11 +129,11 @@ const MealFormular = () => {
           className="mb-3 d-flex justify-content-center gap-2 align-items-center"
           controlId="calories-input"
         >
-          <Form.Label><span className="font-weight-bold"> Calories i need</span></Form.Label>
+          <Form.Label><span className="font-weight-bold"> Number of</span></Form.Label>
           <Form.Control
             type="number"
             key="calories"
-            className="w-25"
+            className="w-25 text-center"
             placeholder="2000"
             // defaultValue={2000}
             step={100}

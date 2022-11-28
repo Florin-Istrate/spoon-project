@@ -19,42 +19,49 @@ const MealPlan = () => {
   const exclude = searchParams.get("exclude");
 
   useEffectOnce(() => {
-    if (timeFrame) {
-      async function fetchData() {
-        try {
-          const mealData = await getMealPlan(
-            timeFrame,
-            calories,
-            diet,
-            exclude
-          );
-          if (mealData.data.hasOwnProperty("week")) {
-            const data = mealData.data.week;
-            const mealList = Object.keys(data).map((weekDay) => {
-              const temp = { ...data[weekDay] };
-              temp.weekDay = weekDay;
-              return temp;
-            });
-            setRecipes(mealList);
-          } else {
-            setRecipes([mealData.data]);
+
+    if(localStorage.getItem("meal") ===  null) {
+      if (timeFrame) {
+        async function fetchData() {
+          try {
+            const mealData = await getMealPlan(
+              timeFrame,
+              calories,
+              diet,
+              exclude
+            );
+            if (mealData.data.hasOwnProperty("week")) {
+              const data = mealData.data.week;
+              const mealList = Object.keys(data).map((weekDay) => {
+                const temp = { ...data[weekDay] };
+                temp.weekDay = weekDay;
+                return temp;
+              });
+              setRecipes(mealList);
+            } else {
+              setRecipes([mealData.data]);
+            }
+          } catch (error) {
+            console.log(error);
           }
-        } catch (error) {
-          console.log(error);
         }
+        
+        fetchData();
+      } else {
+        return;
       }
-      fetchData();
     } else {
-      return;
+      const res = localStorage.getItem("meal");
+      const data = JSON.parse(res)
+      setRecipes(data)
     }
+
+    
   }, []);
 
   const handleShowDetails = async (id) => {
     try {
-      const res = await getMealInformation(id);
-      //localStorage.setItem("modal", JSON.stringify(res));
-      //const res = localStorage.getItem("modal");
-      //const data = JSON.parse(res);
+      const res = await getMealInformation(id);     
       setMealInfo(res.data);
       setShowModal(true);
     } catch (error) {
@@ -67,15 +74,22 @@ const MealPlan = () => {
     setMealInfo(undefined);
   };
 
+  const handleSaveMeal = () => {
+    localStorage.setItem("meal", JSON.stringify(recipes))
+  } 
+
   return (
     <>
       <div>
+        <button className="custom-buton" onClick={handleSaveMeal}>Save Recipes</button>
         {recipes?.map((recipe) => (
           <MealDayContainer
-            mealDay={recipe}
-            handleShowDetails={handleShowDetails}
+          mealDay={recipe}
+          handleShowDetails={handleShowDetails}
           />
         ))}
+
+        {recipes.length === 0  && (<h1 className="text-center">Please provide us with anitional information</h1>)}
       </div>
       <Modal showModal={showModal} handleCloseBtn={handleCloseModal}>
         {mealInfo && (

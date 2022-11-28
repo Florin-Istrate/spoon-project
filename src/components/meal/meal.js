@@ -19,7 +19,7 @@ const Meal = ({ meal, handleShowDetails }) => {
       </ul>
       <div className="d-flex justify-content-between align-items-center">
         <a href={meal.sourceUrl} target="_blank" className="custom-button">
-          go to recipe
+          To Recipe
         </a>
         <button
           className="custom-button"

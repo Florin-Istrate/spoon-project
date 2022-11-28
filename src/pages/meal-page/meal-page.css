@@ -13,3 +13,12 @@
 .margin-0-1 {
   margin: 0 1rem;
 }
+
+.custom-buton {
+  padding: .5rem;
+  background-color: #F0754F;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  border: none;
+}
