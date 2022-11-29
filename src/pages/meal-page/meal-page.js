@@ -76,6 +76,7 @@ const MealPlan = () => {
 
   const handleSaveMeal = () => {
     localStorage.setItem("meal", JSON.stringify(recipes))
+    alert("Meals saved")
   } 
 
   return (
